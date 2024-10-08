@@ -60,11 +60,11 @@ let fn = () => {
         />
       </div>
       <div class="flex">
-        <input type="checkbox" checked="checked" class="checkbox" />
+        <input type="checkbox" checked="checked" class="checkbox checkbox-xs" />
         <p class="text-xs">我已阅读并同意 服务协议 和 隐私政策</p>
       </div>
       <div class="w-full flex items-center justify-center">
-        <button @click="fn" class="btn bg-blue-500 w-2/3 rounded-full text-white">登录</button>
+        <button @click="fn" class="btn w-96">登录</button>
       </div>
       <div>
         <div class="text-xs">还未注册? 立即注册</div>

@@ -1,4 +1,4 @@
 <template>
-  <div>123</div>
+  <button class="btn btn-active btn-neutral">Neutral</button>
 </template>
 <script setup></script>

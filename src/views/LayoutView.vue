@@ -22,34 +22,33 @@
     <div class="w-11/12">
       <div class="border-b border-b-gray-300">代码仓库</div>
       <div class="flex justify-between text-xs">
-        <div class="flex gap-4">
-          <button @click="fn1">最近访问</button>
-          <button @click="fn2">全部仓库</button>
-          <button @click="fn3">开原仓库</button>
+        <div role="tablist" class="tabs tabs-bordered">
+          <input type="radio" name="my_tabs_1" role="tab" class="tab" aria-label="最近访问" />
+          <div role="tabpanel" class="tab-content p-10">
+            <zuiView></zuiView>
+          </div>
+          <input
+            type="radio"
+            name="my_tabs_1"
+            role="tab"
+            class="tab"
+            aria-label="全部仓库"
+            checked="checked"
+          />
+          <div role="tabpanel" class="tab-content p-10"><quanView></quanView></div>
+
+          <input type="radio" name="my_tabs_1" role="tab" class="tab" aria-label="开源仓库" />
+          <div role="tabpanel" class="tab-content p-10"><kaiView></kaiView></div>
         </div>
-        <div><button @click="fn4">创建代码仓库</button></div>
       </div>
-      <component :is="com"></component>
+      <div class="fixed top-7 right-0">
+        <button class="btn btn-active btn-neutral">创建仓库</button>
+      </div>
     </div>
   </div>
 </template>
 <script setup>
-import { ref } from 'vue'
 import zuiView from '@/components/zuiView.vue'
 import quanView from '@/components/quanView.vue'
 import kaiView from '@/components/kaiView.vue'
-import chuangView from '@/components/chuangView.vue'
-let com = ref(zuiView)
-let fn1 = () => {
-  com.value = zuiView
-}
-let fn2 = () => {
-  com.value = quanView
-}
-let fn3 = () => {
-  com.value = kaiView
-}
-let fn4 = () => {
-  com.value = chuangView
-}
 </script>
