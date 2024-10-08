@@ -35,7 +35,7 @@ let fn = () => {
 </script>
 
 <template>
-  <div class="flex">
+  <div class="flex w-screen">
     <div class="w-1/3">
       <img src="/appm3V1L6Y3C3podIGShCo686dXRRY4i.png" alt="" />
     </div>
