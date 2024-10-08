@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col justify-center items-center text-xs gap-4">
+  <div class="flex flex-col justify-center items-center text-xs gap-4" v-show="show">
     <div>欢迎使用代码仓库</div>
     <div class="w-2/3">
       代码仓库用于托管基于 GIT 或 SVN 管理的代码库。通过 Review
@@ -31,12 +31,21 @@
 </template>
 <script setup>
 import { Icon } from '@iconify/vue'
+import { useRouter } from 'vue-router'
+import { onMounted, ref } from 'vue'
 import axios from 'axios'
-
+let show = ref(true)
+let router = useRouter()
 let fn = async () => {
-  let access_token = await localStorage.getItem('access_token')
-  axios.post('https://gitee.com/api/v5/user/repos', {
-    access_token: access_token
-  })
+  router.push('/create')
 }
+onMounted(async () => {
+  let access_token = await localStorage.getItem('access_token')
+  axios.get('https://gitee.com/api/v5/user/repos', {
+    params: {
+      access_token: access_token
+    }
+  })
+  console.log(212313)
+})
 </script>

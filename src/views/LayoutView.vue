@@ -1,7 +1,7 @@
 <template>
   <div class="flex">
     <div
-      class="w-1/12 flex flex-col text-xs h-full justify-center items-center gap-2 border-r border-r-gray-300"
+      class="w-1/12 flex flex-col text-xs h-screen justify-center items-center gap-3 border-r border-r-gray-300"
     >
       <button>工作台</button>
       <button>项目</button>
@@ -42,7 +42,7 @@
         </div>
       </div>
       <div class="fixed top-7 right-0">
-        <button class="btn btn-active btn-neutral">创建仓库</button>
+        <button class="btn btn-active btn-neutral" @click="fn1">创建仓库</button>
       </div>
     </div>
   </div>
@@ -51,4 +51,9 @@
 import zuiView from '@/components/zuiView.vue'
 import quanView from '@/components/quanView.vue'
 import kaiView from '@/components/kaiView.vue'
+import { useRouter } from 'vue-router'
+let router = useRouter()
+let fn1 = () => {
+  router.push('/create')
+}
 </script>
