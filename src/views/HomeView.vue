@@ -36,10 +36,10 @@ let fn = () => {
 
 <template>
   <div class="flex h-screen">
-    <div class="w-1/3">
-      <img src="/appm3V1L6Y3C3podIGShCo686dXRRY4i.png" alt="" />
+    <div class="w-1/2">
+      <img src="/appm3V1L6Y3C3podIGShCo686dXRRY4i.png" class="h-full w-full" alt="" />
     </div>
-    <div class="w-2/3 bg-white flex flex-col gap-4 justify-center items-center">
+    <div class="w-1/2 bg-white flex flex-col gap-4 justify-center items-center">
       <div>
         <div>登录，即刻创造您的应用</div>
       </div>
